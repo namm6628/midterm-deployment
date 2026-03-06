@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # midterm-deployment
-=======
+
 # Product API + UI (Express + MongoDB, fallback in-memory)
 
 > Lưu ý: Dự án này được cung cấp làm nền tảng tham khảo cho sinh viên thực hiện bài presentation giữa kỳ trong môn 502094 - Software Deployment, Operations And Maintenance (biên soạn: ThS. Mai Văn Mạnh). Sinh viên không bắt buộc phải sử dụng đúng dự án này — có thể tự chọn hoặc xây dựng một project tương đương (hoặc phức tạp hơn), sử dụng ngôn ngữ hoặc framework khác nếu muốn.
@@ -92,4 +91,3 @@ Lưu ý: UI trên trang chủ sử dụng fetch + FormData để gửi file, nê
 
 Nếu bạn muốn tôi cập nhật README để ghi rõ cách migrate dữ liệu, cách reset uploads hoặc ví dụ cụ thể hơn, cho biết yêu cầu cụ thể và tôi sẽ bổ sung.
 
->>>>>>> feature/deploy-project-v2
