@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  web:
+    image: nam8286/midterm-web:latest
+    container_name: midterm-web
+    restart: always
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - uploads:/app/public/uploads
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6
+    container_name: midterm-mongo
+    restart: always
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
+  uploads:
