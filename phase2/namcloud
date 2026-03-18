@@ -1,0 +1,27 @@
+# HTTP -> HTTPS redirect
+server {
+    listen 80;
+    server_name namcloud.xyz www.namcloud.xyz;
+
+    return 301 https://$host$request_uri;
+}
+
+# HTTPS server
+server {
+    listen 443 ssl;
+    server_name namcloud.xyz www.namcloud.xyz;
+
+    ssl_certificate /etc/letsencrypt/live/namcloud.xyz/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/namcloud.xyz/privkey.pem;
+
+    location / {
+        proxy_pass http://localhost:3000;
+
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
