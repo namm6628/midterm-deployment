@@ -196,3 +196,5 @@ This project demonstrates:
 - Nguyen Gia Bao – 523H0005  
 - Tran Nguyen Bao – 523H0007  
 
+#Link video demo:
+https://drive.google.com/drive/folders/1MXOdOO_4kFAVaaZp62sUyez9KXKb3uTr
